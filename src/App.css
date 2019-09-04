@@ -2,32 +2,34 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.finder {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.grass > img { /* the '>' finds any element on the right which is a direct child of the element on the left */
+  width: 120px;
+  height: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pokedex {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pokemon {
+  width: 25%;
+  height: 150px;
+}
+.pokemon input {
+  display: block;
+  width: 100%;
+}
+.pokemon input::placeholder {
+  text-transform: capitalize;
+}
+.pokemon h3 {
+  text-transform: capitalize;
 }
