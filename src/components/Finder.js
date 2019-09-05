@@ -8,6 +8,7 @@ export default class Finder extends Component {
     this.state = {
       wildPokemonArr: []
     }
+    this.componentDidMount = this.componentDidMount.bind(this)
   }
 
   componentDidMount() {
@@ -19,11 +20,12 @@ export default class Finder extends Component {
   render() {
     return (
       <div className="finder">
-        {this.state.wildPokemonArr.map(el => (
+        {this.state.wildPokemonArr.map((el, i) => (
         <Grass 
           catchFn={this.props.catchFn}
-          key={el.name} 
+          key={i + el.name} 
           pokemonData={el} 
+          refreshFn={this.componentDidMount}
         />))}
       </div>
     )

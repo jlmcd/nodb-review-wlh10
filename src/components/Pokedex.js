@@ -9,8 +9,9 @@ export default (props) => {
           key={el.id} 
           name={el.name} 
           img={el.img} 
-          saveFn={props.saveFn}
           id={el.id}
+          saveFn={props.saveFn}
+          releaseFn={props.releaseFn}
         />
       ))}
     </div>

@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import grass from './grass.png'
+import grass from '../assets/grass.png'
 
 export default class Grass extends Component {
   constructor() {
@@ -12,10 +12,8 @@ export default class Grass extends Component {
 
   checkGrass() {
     if (!this.state.grassClicked) {
-      console.log('changed state')
       return this.setState({grassClicked: true})
     } else {
-      console.log('caught pokemon')
       this.catchPokemon()
     }
   }
@@ -25,6 +23,7 @@ export default class Grass extends Component {
       name: this.props.pokemonData.name,
       img: this.props.pokemonData.sprites.front_default
     })
+    this.props.refreshFn()
   }
 
   render() {

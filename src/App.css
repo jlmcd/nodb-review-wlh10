@@ -1,5 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
 .App {
   text-align: center;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #FFDE00, rgb(255, 242, 155));
+}
+
+header h1 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 3rem;
+  color: #cc0000;
+  cursor: pointer;
 }
 
 .finder {
@@ -7,9 +21,19 @@
   justify-content: center;
 }
 
+.grass {
+  height: 100px;
+}
+
 .grass > img { /* the '>' finds any element on the right which is a direct child of the element on the left */
   width: 120px;
   height: auto;
+  cursor: pointer;
+}
+
+.grass > img:hover {
+  animation: .2s shake;
+  animation-fill-mode: forwards;
 }
 
 .pokedex {
@@ -18,10 +42,15 @@
   display: flex;
   flex-wrap: wrap;
 }
+h2 {
+  font-family: 'Press Start 2P', cursive;
+  color: #cc0000;
+  cursor: pointer;
+}
 
 .pokemon {
   width: 25%;
-  height: 150px;
+  height: 180px;
 }
 .pokemon input {
   display: block;
@@ -32,4 +61,46 @@
 }
 .pokemon h3 {
   text-transform: capitalize;
+  cursor: pointer;
+}
+.pokemon button {
+  border: none;
+  border-radius: 7px;
+  padding: .5rem 1rem;
+  background: #3b4cca;
+  color: white;
+  font-weight: 700;
+  font-size: .8rem;
+}
+.pokemon button:hover {
+  background: #1d31cc;
+  cursor: pointer;
+}
+.editor button {
+  margin: .183rem;
+}
+.editor input {
+  border-radius: 7px;
+  border: 1px solid #333;
+  padding: .2rem;
+}
+.editor input:focus {
+  outline: none;
+  font-style: italic;
+  border-color: #1d31cc;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg)
+  }
+  33% {
+    transform: rotate(-5deg)
+  }
+  66% {
+    transform: rotate(5deg)
+  }
+  100% {
+    transform: (rotate(0deg))
+  }
 }

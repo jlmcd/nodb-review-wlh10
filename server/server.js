@@ -13,5 +13,7 @@ app.get('/api/wild-pokemon', grassCtrl.getWildPokemon) // to get three wild poke
 
 app.post('/api/pokemon', pokeCtrl.catch)
 app.put('/api/pokemon/:id', pokeCtrl.rename)
+app.delete('/api/pokemon/:id', pokeCtrl.release)
+app.get('/api/pokemon', pokeCtrl.getAllPokemon)
 
 app.listen(SERVER_PORT, () => console.log(`${SERVER_PORT} happy little accidents`))
